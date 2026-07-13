@@ -22,7 +22,10 @@ import GenericUtilities.JavaUtilities;
 import GenericUtilities.PropertyFileUtility;
 import GenericUtilities.WebDriverUtilities;
 
-
+/**
+ * @author K.Sreeja
+ * Create contact
+ */
 public class CreateContactsPomClassTest {
 	
 
