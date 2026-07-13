@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="POMCrmLogin.CreateOrganizationpomClassTest"/>
+      <class name="POMCrmLogin.CreateOrgWithPhoneNumberPomClassTest"/>
+      <class name="POMCrmLogin.CreateOrgWithIndustryAndTypePomClassTest"/>
+      <class name="POMCrmLogin.CreateContactsPomClassTest"/>
+      <class name="POMCrmLogin.CreateContactWithSupportDatePomClassTest"/>
+      <class name="POMCrmLogin.CreateContactWithOrgPomClassTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
