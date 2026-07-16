@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -22,9 +23,8 @@ import CrmApplicationPomPages.OrganizationPomPage;
 import GenericUtilities.ExcelFileUtility;
 import GenericUtilities.JavaUtilities;
 import GenericUtilities.UtilityObjectClass;
-import ListenersUtility.Listeners;
 
-@org.testng.annotations.Listeners(ListenersUtility.Listeners.class)
+@Listeners(ListenersUtility.ListenersUtil.class)
 public class ContactsTest extends BaseClass {
 	@Test(groups = "smoke", retryAnalyzer = ListenersUtility.RetryAnalyzer.class)
 	public void contactslastname() throws InterruptedException, IOException {

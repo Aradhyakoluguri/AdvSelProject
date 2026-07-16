@@ -3,21 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="POMCrmLogin.ContactsTest">
+      <class name="POMCrmLogin.OrganizationTest">
         <methods>
+          <include name="createorgwithphone"/>
           <include name="closeTheBrowser"/>
+          <include name="createorgwithindustryandtype"/>
           <include name="launchTheBrowser"/>
+          <include name="createorgwithorgname"/>
           <include name="ConfigParellelExe"/>
-          <include name="ContactSupportStartAndEndDate"/>
-          <include name="login"/>
           <include name="disconnectWithDB"/>
-          <include name="contactslastname"/>
+          <include name="login"/>
           <include name="connectToDB"/>
-          <include name="logout"/>
           <include name="closeParellelExe"/>
-          <include name="CreateContactUsingOrganizationName"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- POMCrmLogin.ContactsTest -->
+      </class> <!-- POMCrmLogin.OrganizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

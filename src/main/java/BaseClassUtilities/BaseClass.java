@@ -39,11 +39,11 @@ public class BaseClass {
 	public void ConfigParellelExe() {
 		Reporter.log("configure Parellel Exe",true);
 	}
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass(alwaysRun=true)
-	public void launchTheBrowser(String browser) throws IOException {
+	public void launchTheBrowser() throws IOException {
 		Reporter.log("launching the Browser",true);
-		//String browser = putil.fetchdatafrompropertyfile("Browser");
+		String browser = System.getProperty("browser",putil.fetchdatafrompropertyfile("Browser"));
 		
 		if(browser.equals("chrome"))
 			driver = new ChromeDriver();
@@ -60,10 +60,10 @@ public class BaseClass {
 	public void login() throws IOException {
 		Reporter.log("login to VTIGER",true);
 		
-		String url = putil.fetchdatafrompropertyfile("URL");
-		String username = putil.fetchdatafrompropertyfile("UserName");
-		String password = putil.fetchdatafrompropertyfile("Password");
-		String timeouts = putil.fetchdatafrompropertyfile("timeouts");
+		String url = System.getProperty("url",putil.fetchdatafrompropertyfile("URL"));
+		String username = System.getProperty("username",putil.fetchdatafrompropertyfile("UserName"));
+		String password =System.getProperty("password", putil.fetchdatafrompropertyfile("Password"));
+		String timeouts =System.getProperty("timeouts", putil.fetchdatafrompropertyfile("timeouts"));
 		CrmLoginPomPage l = new CrmLoginPomPage(driver);
 		wutil.maximizeTheWindow(driver);
 		wutil.navigateToAnApp(driver, url);

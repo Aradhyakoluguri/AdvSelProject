@@ -6,6 +6,10 @@
 <include name="smoke"></include>
 </run>
 </groups>
+<listeners>
+		<listener class-name="ListenersUtility.ListenersUtil"></listener>
+		
+	</listeners>
   <test thread-count="5" name="Test">
     <classes>
       <class name="POMCrmLogin.ContactsTest"/>
