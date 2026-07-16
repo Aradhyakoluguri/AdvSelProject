@@ -10,105 +10,103 @@
 		<maven.compiler.source>21</maven.compiler.source>
 	</properties>
 	<profiles>
-	<profile>
-	<id>batch</id>
-	<build>
-		<plugins>
+		<profile>
+			<id>batch</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>CrmBatch.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>CrmBatch.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-	</profile>
-	<profile>
-	<id>group</id>
-	<build>
-		<plugins>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>group</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>group.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>group.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-	</profile>
-	<profile>
-	<id>parallelcbt</id>
-	<build>
-		<plugins>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>parallelcbt</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>parallelCrossBrowser.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>parallelCrossBrowser.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-	</profile>
-	<profile>
-	<id>paralleldistribution</id>
-	<build>
-		<plugins>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>paralleldistribution</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>parelleldistribution.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>parelleldistribution.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-	</profile>
-	<profile>
-	<id>listeners</id>
-	<build>
-		<plugins>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>listeners</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>ListenersExe.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>ListenersExe.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-	</profile>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
-	
 	<dependencies>
-
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
